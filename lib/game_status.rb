@@ -25,10 +25,8 @@ WIN_COMBINATIONS = [
       position_2 = board[win_index_2]
       position_3 = board[win_index_3]
       
-      if position_1 == position_2 && position_2 == position_3
-        return win_combination
-      elsif board.all? {|i| i == " "}
-        false
+      if position_1 == position_2 && position_2 == position_3 && position_1 != " "
+        return win_combination 
       else
         false
       end
